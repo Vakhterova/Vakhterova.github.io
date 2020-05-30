@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DLK Category product. Toys filter. </title> 
+    <meta name="description" content ="In toys category you can find information about every toy and choose the most appropriate for you in accordance with your request" >
+    <meta name="keywords" content="Toys,category,cost,color,delivery"> 
+  </head>
+  <body>
+    <header class="header container">
+    <a class="header__logo-wrapper" href="/index.html">
+      <img class="header__logo-img" src="/static/images/logo.jpg" alt="logo">
+    </a>
+    <button class="header__button-menu  header__menu_js"> MENU </button>
+    <div class="header__mobile-wrapper-close header__mobile-close-btn_none  header__mobile-close_js"> 
+      <img class="header__X-img" src="/static/images/x1.svg" alt="X">       
+    </div>
+    <nav class="header__nav-wrapper">
+      <ul class="hidden-marker header__nav-links ">
+        <li>
+          <a class="header__nav-link" href="/pages/blog/index.html"> blog </a>
+        </li>
+        <li>
+          <a class="header__nav-link" href="/pages/catalog/index.html"> catalog </a>
+        </li>
+        <li>
+          <a class="header__nav-link" href="#"> about Us </a>
+        </li>
+        <li> 
+          <a class="header__nav-link" href="/pages/animation/index.html"> animation </a>
+        </li>
+        <li> 
+          <a class="header__nav-link" href="/pages/svg/index.html"> svg </a>
+        </li>
+        <li> 
+          <a class="header__nav-link" href="/pages/grid/index.html"> grid </a>
+        </li>
+      </ul>
+      <ul class="hidden-marker header__nav-wrapper-search">
+        <li>      
+          <button class="header__button-search">
+            <picture>
+              <source srcset="/static/images/search.mobile.svg"  media="(min-width:0px) and (max-width:375px)">       
+                <img class="header__search-img" src="/static/images/search.svg" alt="search">
+            </picture>
+          </button>
+        </li>
+        <li>
+          <a class="header__nav-link header__link-contact" href="/pages/contact/index.html"> Contact Us </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="header__mobile header__mobile_js header__mobile_hidden">
+      <div class="header__mobile-wrapper">
+        <nav class="header__mobile-nav ">
+          <ul class="hidden-marker header__mobile-nav-list">
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/blog/index.html"> blog </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/catalog/index.html"> catalog </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="#"> about Us </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/animation/index.html"> animation </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/svg/index.html"> svg </a>
+            </li>
+            <li class="header__mobile-nav-item header__mobile-nav-item_mb">
+              <a class="header__mobile-nav-link" href="/pages/grid/index.html"> grid </a>
+            </li>
+            <li class="header__mobile-nav-item ">
+              <a class="header__mobile-nav-link header__mobile-nav-link_bold" href="/pages/contact/index.html"> Contact Us </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+
+</header>
+    <main>
+      <h1 class="page-title container "> Toy for kids </h1>
+      <div class="breadcrumbs container">
+        <ol class="hidden-marker breadcrumbs__list">
+          <li>
+            <a class="breadcrumb__item" href="/index.html"> Home </a>
+          </li>
+          <li>
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
+          </li>
+          <li>
+            <a class="breadcrumb__item" href="/pages/catalog/index.html"> Catalog </a>
+          </li>
+          <li>
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
+          </li>
+          <li class="breadcrumb__item breadcrumb__item_active">Toys </li>
+        </ol>
+      </div>
+      <section class="toys-filter">
+        <h2 class="visually-hidden"> Product's filter </h2>
+        <div class="toys-filter__form container">
+          <form class="toys-filter__filter-form" method="POST" action="https://form-data-dl.herokuapp.com/api/messages">
+            <div class="toys-filter__cost-filter">
+              <label class="toys-filter__filter-name" for="input-cost"> Cost </label>
+              <input name="cost" class="toys-filter__cost-line" id="input-cost" type="range" min="0" max="500" value="1">
+              <div class="toys-filter__cost-scroll">
+                <div class="toys-filter__cost-scroll_up">0</div>
+                <div class="toys-filter__cost-scroll_to">500</div>
+              </div>
+            </div>
+            <fieldset class="toys-filter__color-filter">
+              <legend class="toys-filter__filter-name"> Color </legend>
+              <ul class="toys-filter__filter-list hidden-marker">
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="black" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"> </span>
+                    <span class="toys-filter__filter-item-text"> Black </span> 
+                  </label>
+                </li>
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="blue" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Blue </span>  
+                  </label>
+                </li>
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="green" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Green </span>                
+                  </label>
+                </li>
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="white" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> White </span> 
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="toys-filter__delivery-filter">
+              <legend class="toys-filter__filter-name"> Delivery </legend>
+              <ul class="toys-filter__filter-list hidden-marker">
+                <li class="toys-filter__filter-element-delivery_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="delivery" type="radio">
+                    <span class="toys-filter__filter-delivery-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Free shipping </span>                  
+                  </label>
+                </li>
+                <li class="toys-filter__filter-element-delivery_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="form-radio toys-filter__filter-item visually-hidden" name="delivery" type="radio">
+                    <span class="toys-filter__filter-delivery-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Fast shipping </span>  
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="toys-filter__amount-filter">
+              <legend class="toys-filter__filter-name toys-filter__filter-name_mb">Amount</legend>
+              <ul class="toys-filter__range-list hidden-marker ">
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"> </span>
+                    <span class="toys-filter__filter-amount-text" >  0-5 </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"></span>
+                    <span class="toys-filter__filter-amount-text">  10-20 </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"></span>
+                    <span class="toys-filter__filter-amount-text"> 20-50 </span>  
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button filter-form-button">Apply</button>
+
+          </form>
+        </div>
+      </section>
+      <div class="toys container">
+        <ul class="toys__list hidden-marker">
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/shark.jpg" alt="SHARKY BEAN BAG CHAIR COVER">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> SHARKY BEAN BAG CHAIR COVER  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $60.00 USD </span>
+  </div>
+</li>
+
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/frames.jpg" alt="BRASS DECO FRAMES">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> BRASS DECO FRAMES  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $66.00 USD </span>
+  </div>
+</li>
+
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/apron.jpg" alt="CIBO FULL APRON">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> CIBO FULL APRON  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $60.00 USD </span>
+  </div>
+</li>
+
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/machine.jpg" alt="GATCHA GATCHA GUMBALL MACHINE">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> GATCHA GATCHA GUMBALL MACHINE  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $56.00 USD </span>
+  </div>
+</li>
+
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/candle.jpg" alt="CHRISTMAS ADVENT SCENTED CANDLE">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> CHRISTMAS ADVENT SCENTED CANDLE  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $56.00 USD </span>
+  </div>
+</li>
+
+          <li class="toys__card">
+  <a class="toys__card-link" href="#">
+    <img class="toys__card-img" src="/static/images/spinning.jpg" alt="TANGLE SPINNING TEA LIGHT">
+    <div class="toys__card-link-learn"> learn more </div>
+  </a>
+  <div class="toys__card-description"> TANGLE SPINNING TEA LIGHT  </div>
+  <div class="toys__card-price-wrapper">
+    <span class="toys__card-price"> $56.00 USD </span>
+  </div>
+</li>
+
+        </ul>
+      </div>
+      <div class="selector container">
+        <button class="selector__button">
+          <svg class="selector__button_back"  width="19" height="28" fill="none" viewBox="0 0 18 29" stroke="#1E0606" stroke-width="4">
+            <polyline points="2 2, 16 14, 2 26"  opacity= "0.12"/> 
+          </svg>
+        </button>
+        <div class="selector__pages-wrapper">
+          <ul class="hidden-marker selector__pages">
+            <li class="selector__pages-list">
+              <a class="selector__page-item selector__page-item_current" href="#">1
+              </a>
+            </li>
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">2
+              </a>
+            </li>
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">3
+              </a>
+            </li>
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">4
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="selector__button" >
+          <svg class="selector__button_next" width="19" height="28" fill="none" viewBox="0 0 18 29"  stroke-width="4" stroke="#1E0606" >
+            <polyline   points="2 2, 16 14, 2 26"  opacity= "0.12" /> 
+          </svg>
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-content__main">
+      <section class="footer-navigation">
+        <h2 class="footer footer-title"> Navigation</h2>
+        <hr class="footer-line_short"> 
+        <ul class="hidden-marker footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#"> About Us</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#"> Blog </a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Design Services </a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Featured On </a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">2018 Holiday Catalog </a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Shop By Designer </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-information">
+        <h2 class="footer footer-title">Customer Information</h2>
+        <hr class="footer-line_short"/>
+        <ul class="hidden-marker footer-information__list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Contact Us</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Sale Exclusions</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Shipping & Returns</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Terms & Conditions</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Search</a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-connect">
+        <h2 class="footer footer-title">Connect </h2>
+        <hr class="footer-line_short" />
+        <form class="email-form" >
+          <p class="connect-form">
+            <label for="input-email"> </label>
+            <input class="input-email__form" name="email" id="input-email" required placeholder="Email">
+          </p>
+          <button class="button footer-button" type="submit">
+            Join
+          </button>
+        </form>
+        <ul class="hidden-marker social-list">
+          <li class="social-item">
+            <a class='social-link' href="#">
+              <img class="social-img" src="/static/images/facebook.svg" alt="facebook" width="30" height="30">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class='social-link' href="#">
+              <img class="social-img" src="/static/images/twitter.svg" alt="twitter"  width="30" height="30">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class='social-link' href="#">
+              <img class="social-img" src="/static/images/pinterest.svg" alt="pinterest"  width="30" height="30">
+            </a>
+          </li>
+          <li class="social-item">
+            <a class='social-link' href="#">
+              <img class="social-img" src="/static/images/instagram.svg" alt="instagram"  width="30" height="30">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <hr class="footer-line_bottom"/>
+    <div class="footer-information__general">
+      <div class="company-rating">
+        <a class="rating-link" href="#"> Company Rating </a>
+        <div class="stars">
+          <span class="star-wrapper">
+            <svg  width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star" stroke-linejoin="round"  points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94"> </polygon> 
+            </svg>
+          </span>
+          <span class="star-wrapper">
+            <svg  width="15" height="14" viewBox="0 0 19 18" >
+              <polygon class="star" stroke-linejoin="round"  points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94"> </polygon> 
+            </svg>
+          </span>
+          <span class="star-wrapper">
+            <svg  width="15" height="14" viewBox="0 0 19 18" >
+              <polygon class="star" stroke-linejoin="round"  points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94"> </polygon> 
+            </svg>
+          </span>
+          <span class="star-wrapper">
+            <svg  width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star" stroke-linejoin="round"  points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94"> </polygon> 
+            </svg>
+          </span>
+          <span class="star-wrapper">
+            <svg  width="15" height="14" viewBox="0 0 19 18" >
+              <polygon class="star" stroke-linejoin="round"  points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94"> </polygon> 
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="footer-wrapper"> 
+        <div class="footer-copyright">
+          Copyright © 2018 Dlk • Design Life Kids
+        </div>
+        <a class="design" href="#"> Web Design — Direct Line Development </a>
+      </div>
+    </div>
+    <section class="footer-navigation_mobile">
+      <h2 class="footer footer-title_mobile footer-title__navigation_mt"> Navigation</h2>
+      <hr class="footer-line_bottom_mobile">
+      <div class="footer-navigation_wrapper">
+        <ul class="hidden-marker footer-navigation__list_1">
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#"> About Us</a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#"> Blog </a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Design Services </a>
+          </li>
+        </ul>
+        <ul class="hidden-marker footer-navigation__list_2">
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Featured On </a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">2018 Holiday Catalog </a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Shop By Designer </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer-information_mobile">
+      <h2 class="footer footer-title_mobile footer-title__information_mt">Customer Information</h2>
+      <hr class="footer-line_bottom_mobile" />
+      <div class="footer-navigation_wrapper">
+        <ul class="hidden-marker footer-information__list_1">
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Contact Us</a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Sale Exclusions</a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Shipping & Returns</a>
+          </li>
+        </ul>
+        <ul class="hidden-marker footer-information__list_2">
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Terms & Conditions</a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-item_mobile">
+            <a class="footer-link_mobile" href="#">Search</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer-connect_mobile">
+      <h2 class="footer footer-title_mobile footer-title__connect_mt">Connect </h2>
+      <hr class="footer-line_bottom_mobile" />
+      <form class="email-form_mobile">
+        <p class="connect-form_mobile">
+          <label for="input-email_mobile"> </label>
+          <input class="input-email__form_mobile" name="email" id="input-email_mobile" placeholder="Email">
+        </p>
+        <button class="button footer-button_mobile" type="submit">
+          Join
+        </button>
+      </form>
+      <ul class="hidden-marker social-list_mobile">
+        <li class="social-item_mobile">
+          <a class='social-link_mobile' href="#">
+            <img class="social-img_mobile" src="/static/images/facebook.svg" alt="facebook" width="30" height="30">
+          </a>
+        </li>
+        <li class="social-item_mobile">
+          <a class='social-link_mobile' href="#">
+            <img class="social-img_mobile" src="/static/images/twitter.svg" alt="twitter" width="30" height="30">
+          </a>
+        </li>
+        <li class="social-item_mobile">
+          <a class='social-link_mobile' href="#">
+            <img class="social-img_mobile" src="/static/images/pinterest.svg" alt="pinterest" width="30" height="30">
+          </a>
+        </li>
+        <li class="social-item_mobile">
+          <a class='social-link_mobile' href="#">
+            <img class="social-img_mobile" src="/static/images/instagram.svg" alt="instagram" width="30" height="30">
+          </a>
+        </li>
+      </ul>
+      <hr class="footer-line_bottom_mobile" />
+    </section>
+    <div class="footer-information__general_mobile">
+      <div class="company-rating_mobile">
+        <a class="rating-link_mobile" href="#"> Company Rating </a>
+        <div class="stars_mobile">
+          <span class="star-wrapper_mobile">
+            <svg width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star_mobile" stroke-linejoin="round"
+                points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94">
+              </polygon>
+            </svg>
+          </span>
+          <span class="star-wrapper_mobile">
+            <svg width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star_mobile" stroke-linejoin="round"
+                points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94">
+              </polygon>
+            </svg>
+          </span>
+          <span class="star-wrapper_mobile">
+            <svg width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star_mobile" stroke-linejoin="round"
+                points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94">
+              </polygon>
+            </svg>
+          </span>
+          <span class="star-wrapper_mobile">
+            <svg width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star_mobile" stroke-linejoin="round"
+                points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94">
+              </polygon>
+            </svg>
+          </span>
+          <span class="star-wrapper_mobile">
+            <svg width="15" height="14" viewBox="0 0 19 18">
+              <polygon class="star_mobile" stroke-linejoin="round"
+                points="0.88 6.94,  6.92 6.94, 8.94 0.72, 10.96 6.94, 17.5 6.94, 12.21 10.78,14.23 17,8.94 13.16,3.65 17, 5.67 10.78,0.88 6.94">
+              </polygon>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="footer-wrapper_mobile">
+        <div class="footer-copyright_mobile">
+          Copyright © 2018 Dlk • Design Life Kids
+        </div>
+        <a class="design_mobile" href="#"> Web Design — Direct Line Development </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="index.js"></script>   
+  </body>
+  </html>
